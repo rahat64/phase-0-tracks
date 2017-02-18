@@ -9,4 +9,7 @@
 * What is a commit? What makes a good commit message?
     - > Committing in git is basically creating a save point for whatever project that is currently being worked on. A good commit message is usually detailed and contain every bit of information on changes that were made since the last commit. 
 * What is a merge conflict?
-    - > In git, merging occurs when the user trys to integrate contents from sub branches to the main one. However, situations that involve two people working together on the same file making various changes can have different results and git won't know which changes to apply. This in turn will create what is known as a merge conflict.
+    - > In git, merging occurs when the user trys to integrate contents from sub branches to the main one. However, situations that involve two people working together on the same file making various changes can have different results and git won't know which changes to apply. This in turn will create what is known as a merge conflict
+    
+    
+# *Notice Change 
