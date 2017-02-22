@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ident-I-Need</title>
+</head>
+<body>
+<form name="Ident-I-NEED" action="success.html" method="post">
+<fieldset>
+	<div>
+		<label>First Name:</label>
+		<input type="text" name="firstname">
+	</div>
+	<div>
+		<label>Last Name:</label>
+		<input type="text" name="lastname">
+	</div>
+	<div>
+		<label for="title">Gender:</label>
+		<select id="title" name="title">
+  			<option value="" selected>Please choose</option>
+
+  			<option value="Male">Male</option>
+  			<option value="Female">Female</option>
+  			<option value="Other">Other</option>
+	</div>
+</fieldset>
+<p></p>
+
+<fieldset>
+	<div>
+      <label>If Other:</label>
+      <input type="text" name="adv-name" placeholder="Specify if Other">
+    </div>
+	<div>
+		<label for="message">Hobbies:</label>
+  		<textarea cols="20" rows="10"></textarea> 
+  	</div>
+</fieldset>
+
+<fieldset>
+	<div>
+		<label>Date of Birth:</label>
+		<input type="date" name="date">
+	</div>
+	<div>
+		<input type="checkbox" name="agreement" value="agree">
+		Check this box to confirm that you are not a robot
+	</div>
+</fieldset>
+
+<button type="submit">Send Identity</button>
+
+</form>
+
+</body>
+</html>
