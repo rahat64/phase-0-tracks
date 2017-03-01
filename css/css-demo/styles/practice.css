@@ -1,0 +1,64 @@
+section#contact-info {
+	font-size: .8em;
+}
+.job {
+	background-color: #e9e5dc;
+	border-radius: 20px;
+	padding: 4px;
+	margin-top: 3%;
+}
+
+.accomplishments {
+	font-size: .8em;
+}
+
+.featured {
+	color: red;
+}
+
+
+
+/*
+"Cascading" means that styles can fall (or cascade) 
+from one style sheet to another, enabling multiple 
+style sheets to be used on one HTML document. You can 
+set "!important" on any declaration and this will 
+override other declarations for the same element
+*/
+
+/*
+"Pseudo-selectors" is an umbrella term used to cover both 
+kinds of selectors (or really any selector that begins 
+with at least one :), but it is itself meaningless, because 
+in Selectors, pseudo-classes and pseudo-elements are two 
+fundamentally different things. It is also important to note
+that Pseudo Elements get double colon such as ::first-line
+and ::firt-letter while Pseudo classes get a signle colon
+like :root, :first-child, :last-child;
+
+[style.css]   
+ol > li:last-child{    
+color: red;  }  
+
+[index.html]  
+<body>   
+	<ol>     
+		<li>List-item 1</li>     
+		<li>List-item 2</li>     
+		<li>List-item 3</li>   
+	</ol> 
+	<ul>
+
+</body>
+
+This is an example of a pseudo class in action where the
+last item on the list is being specified to change it's 
+font color into red.
+*/
+
+/*
+In order to select the child elemnt of another element, we
+found it simple to create a class inside the child element 
+and call upon it with class selector in CSS like we did in
+line 4, 11 and 15 for instance.
+*/
