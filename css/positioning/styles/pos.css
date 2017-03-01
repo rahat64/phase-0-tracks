@@ -1,0 +1,17 @@
+#otto {
+	margin: 10em 40em auto;
+}
+
+#hat {
+	position: absolute;
+	top: 4em;
+	left: 40em;
+	right: 13px;
+}
+
+#glasses {
+	position: absolute;
+	top: 16.7em;
+	left: 43em;
+	right: 13px;
+}
