@@ -21,6 +21,12 @@ cite {
   min-width: 150px;
 }
 
+@media screen and (max-width: 648px) {
+  #external-links ul a{
+    color: green;
+  }
+}
+
 main {
   width: 75%;
   display: inline-block;
@@ -44,4 +50,28 @@ figcaption {
 
 body {
   max-width: 960px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+.responsive-headers {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 650px) {
+  .responsive-headers {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  ol {
+    padding-left: 15px;
+  
+  }
+
 }
