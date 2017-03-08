@@ -1,0 +1,43 @@
+1.) Algorithm for using an elevator for a robot.
+
+- Stand in front of the elevator doors
+- Between both the doors, there will be two buttons
+    - one up arrow, and the other down arrow
+    - If the intention is to ascend, press the up arrow
+    - If the intention is to descend, press the down arrow
+    - Wait for one of the elevator doors to open
+    - When open, go into the elevator
+- Once inside there will be more buttons along the side of the
+  entrance
+    - The buttons will consist of various numbers representing
+      each floor that the elevator can go to
+    - Access memory databanks to recall which floor needs 
+      to be attended
+    - Once determined, press the button representing the floor
+      number that needs to be attended
+- Observe a monitor located to the top center of the doors
+    - Pay attention to the number that appears on the moniter
+    - Once the number that was pressed on the button appears 
+      on the monitor, wait for the doors to open.
+    - Exit the elevator once the door opens and the 
+      destination should be reached.
+
+2.) Common life struggle (Waking up to the Alarm)
+
+- Set alarm before going to bed 
+    - If your ears often fall deaf to the alarm, set it to an
+      hour before the intended time
+    - Make sure to wind it back up to AM if it's set on PM
+    - Also take into acount for military time if that's 
+      your preference
+- Go to sleep
+- Once you hear the alarm, get off the bed!
+    - If you set the alarm an hour early, hit the snooze 
+      button and go back to bed
+    - The snooze effect will kick in every 10 minutes 
+    - Continuosly get off bed every 10 minutes to hit snooze
+    - Get off bed for good when the intended time of 
+      awakening arrives
+    - Don't hit the snooze button, instead disable alarm 
+      completely until next intended use
+- Wake up!
