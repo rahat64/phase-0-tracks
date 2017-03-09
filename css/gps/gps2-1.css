@@ -1,3 +1,37 @@
-body {
-	background: yellow;
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header>h1:hover {
+  color: red;
+}
+header>p {
+  text-align: left;
+}
+
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  background: yellow;
+  padding: 5px;
+  margin: 5px;
+  border-left: 10px solid green;
+}
+ 
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  background: blue;
+  padding: 5px;
+  margin: 5px;
+  border-right: 10px dotted white;
+  color: white;
+}
+footer {
+  background: yellow;
+  padding: 50px;
+  margin: 5px;
 }
