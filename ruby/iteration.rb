@@ -35,4 +35,11 @@ has_h.map do |key, value|
 end
 
 p has_h
-#p has_h
+
+arr.keep_if { |x| x =~ /[c]/}
+
+p arr
+
+has_h.select { |k, v| v == "budweiser"}
+
+p has_h
