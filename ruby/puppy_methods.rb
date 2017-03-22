@@ -38,5 +38,9 @@ spike.dog_years(50)
 spike.dog_years(14)
 spike.roll_over
 
-
+class Elements
+	def initialize
+		puts "Initializing new element instance"
+	end
+end
 
