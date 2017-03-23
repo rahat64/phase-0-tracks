@@ -39,9 +39,9 @@ tiger = Tiger.new
 lion = Lion.new
 
 roar1 = tiger.yell_angrily("Rawwr")
-roar2 = tiger.yell_happily("Rawwr")
-roar3 = lion.yell_angrily("Rawwr")
-roar4 = lion.yell_happily("Rawwr")
+roar2 = tiger.yell_happily("Roar")
+roar3 = lion.yell_angrily("Growwwl")
+roar4 = lion.yell_happily("zzzZ")
 
 puts "Happy Tiger: #{roar2}, Angry Tiger: #{roar1}.."
 puts "--------------------------------------"
