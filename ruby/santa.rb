@@ -64,17 +64,17 @@ new_age = 0
 while santas.length <= 100
 	idx = 0
   	santas << Santa.new(some_genders.sample, some_ethnicities.sample, new_age)
-  	new_age = Random.rand(0..140)
+  	new_age = Random.rand(0..140) 
   	santas[idx].summary
   	santas[idx].speak
   	idx += 1
 end
 
-santas[0].get_mad_at("Rudolph")
+santas[0].get_mad_at("Rudolph") #testing to see if rudolph is sent to last slot
 santas[0].summary
-santas[1].get_mad_at("Tanya")
+santas[1].get_mad_at("Tanya") #Tanya's not in reindeer roster 
 santas[1].summary
-santas[1].celebrate_b_day
+santas[1].celebrate_b_day # set age should increase by 1
 santas[1].gender = "unigender"
 santas[1].summary
 santas[50].summary
