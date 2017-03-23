@@ -42,5 +42,26 @@ class Elements
 	def initialize
 		puts "Initializing new element instance"
 	end
+
+  def fire
+    puts "*sizzle*/burn"
+  end
+
+  def water
+    puts "*splash*"
+  end
+
+  def earth
+    puts "crush!"
+  end
 end
 
+elementals = []
+
+50.times do
+  elementals << element = Elements.new
+end
+
+elementals.each {|e| e.fire}
+elementals.each {|e| e.water}
+elementals.each {|e| e.earth}
