@@ -1,13 +1,12 @@
 class TodoList
-	
 	attr_accessor :list
 	
-	def initialize
-		self.list = []
+	def initialize(list)
+		@list = list
 	end
 
 	def get_items
-		list
+		@list
 	end
 
 end
