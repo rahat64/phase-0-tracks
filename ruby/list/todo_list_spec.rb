@@ -8,12 +8,12 @@ describe TodoList do
   end
 
   it "adds an item to the list" do
-    list.add_item("mop")
+    todo_list.add_item("mop")
     expect(todo_list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
   end
 
   it "deletes an item" do
-    list.delete_item("do the dishes")
+    todo_list.delete_item("do the dishes")
     expect(todo_list.get_items).to eq ["mow the lawn"]
   end
 
