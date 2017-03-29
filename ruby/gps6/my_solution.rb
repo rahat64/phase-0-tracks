@@ -4,18 +4,21 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Imports code from one file to another so the user doesn't have
+# to recall previous code.
 require_relative 'state_data'
 
 class VirusPredictor
 
+# creates an instance that requires 3 arguments
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+# wrapper method that calls upon the predicted_deaths
+# and speed_of_spread methods
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +26,8 @@ class VirusPredictor
 
   private
 
+# prints out predicted number of deaths according to the calculations
+# that are set up in the if, elsif, else conditions.
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +46,9 @@ class VirusPredictor
 
   end
 
+# responsible for increasing speed relative to population density of 200
+# and increases by .5 everytime population decreases by 50 then prints
+# out a string.
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -69,7 +77,7 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-
+=begin
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
 
@@ -81,6 +89,23 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
+=end
+=begin
+STATE_DATA.each do |key, value|
+  value.each do |k,v|
+    run_all = VirusPredictor.new(key, k, v)
+    p run_all
+    #run_all.virus_effects
+  end
+end
+=end
+
+STATE_DATA.each do |key, value|
+  pop_d = value[:population_density]
+  pop = value[:population]
+  run_all = VirusPredictor.new(key, pop_d, pop)
+  run_all.virus_effects
+end
 
 
 #=======================================================================
