@@ -17,7 +17,12 @@ function reverse(x) {
 	var blank = '';
 	for (var i = x.length - 1; i >= 0; i--)
 		blank += x[i];
-	console.log(blank);
+	if (1 == 1) {
+		console.log(blank);
+	}
+	else {
+		false;
+	}
 }
 
 reverse("hello");
