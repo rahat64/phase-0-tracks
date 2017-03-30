@@ -1,39 +1,61 @@
 class Game
   
-  attr_reader :remaining_guesses, :guesses
-  
   def initialize(word)
     @word = []
     @word = word.split(//)
-    @progress = ["_" * word.length ]
-    @guesses = 0 
-    @remaining_guesses = word.length
-    @won = true
+    @progress = Array.new(@word.length, '_')
+    @guesses = []
+    @limit = word.length
+    @counter = 0
+    @tries = @limit - @counter
   end
-  
-  def print_check(letter)
-    letter.each do |x|
-      if @word.include? x 
-        p x 
+
+  def guess(letter)
+    while @counter < @limit
+      while letter.length > 1 || letter.length <= 0
+        p "Just one letter will do"
+        letter = gets.chomp
+      end
+      if @word.include?(letter)
+        idx = @word.each_index.select{|x| @word[x] == letter}
+        idx.each do |x|
+          @progress[x] = letter
+        end
+        p @progress
+   
+        if @word == @progress
+          puts "Congratulations, you've won"
+          break
+        else
+          puts "Next guess please."
+          letter = gets.chomp
+        end
       else
-        p '_'
-        @won = false
+        @guesses << letter
+        puts "Sorry try again!"
+        letter = gets.chomp
+      end
+  
+      if @progress.include?(letter) || @guesses.include?(letter)
+        puts "You already guessed that. Try something else"
+        letter = gets.chomp
+      else
+        @counter += 1
+      end
+
+      if @counter == @limit
+        p "Game over, you fail"
       end
     end
-    
-    puts "~~~~~~~~~~~~~~~~~~~~"
-    return @won
   end
-  
+
 end
 
 puts "User 1: Enter a word"
-secret = gets.chomp 
-n_game = Game.new(secret)
+word = gets.chomp
+n_game = Game.new(word)
 
-puts "User 2: you have #{n_game.remaining_guesses} attempts to guess correctly."
+puts "User 2: Try guessing the word one letter at a time"
+letter = gets.chomp
 
-while n_game.guesses < n_game.remaining_guesses
-  guess = getks.chomp
-  n_game.print_check(guess)
-end
+n_game.guess(letter)
