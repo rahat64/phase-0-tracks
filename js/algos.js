@@ -26,8 +26,40 @@ arr = new Array("Long Phrase", "Longest Phrase", "Longer Phrase");
 
 longest(arr);
 
-/////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+var person1 = {name: "Steven", age: 54};
+var person2 = {name: "Tamir", age: 54};
 
 function match(x,y) {
-	
+	if (x.name == y.name || x.age == y.age) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+console.log(match(person1, person2));
+
+/////////////////////////////////////////////////////////////
+
+function random_test(x) {
+	var rand_string = " ";
+	var alpha_set = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+	for(var i = 0; i < x; i++) {
+		rand_string += alpha_set.charAt(Math.floor(Math.random() * alpha_set.length));
+	}
+
+	return rand_string;
+}
+
+console.log(random_test(3));
+console.log(random_test(5)); 
+
+arr2 = new Array();
+
+for(var i = 1; arr2.length < 11; i++) {
+	arr2 += random_test(i);
+	longest(arr2);
 }
