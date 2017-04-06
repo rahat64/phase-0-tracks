@@ -1,0 +1,59 @@
+sqlite> SELECT * FROM reviews;
+id          stars       comment               business_id  user_id
+----------  ----------  --------------------  -----------  ----------
+1           5           Deathly Hospitality!  1            7
+2           5           Awesome Towing        2            1
+sqlite> SELECT * FROM users;
+id          first_name  last_name
+----------  ----------  ----------
+1           Bradford    Pitt
+2           Mandy       Kaling
+3           Angela      Jolie
+4           Steven      Wonder
+5           Holly       Berry
+6           Merryl      Streepman
+7           Denzel      George
+sqlite> SELECT * FROM businesses;
+id          name
+----------  ----------------------------
+1           Grundy Hollow Wedding Chapel
+2           Amir's Towing
+3           The Beagle Nightclub
+4           Lotus Yoga
+5           Plumbing by Janet
+6           Sushi World
+7           JoeBob's Sportz Barn
+
+// Using inner join is an effective way to join 3 tables and at the same 
+// time, use specific values that you wanna view before FROM after SELECT
+// to only view necessary information that isn't repetetive.
+
+sqlite> SELECT reviews.stars, reviews.comment,
+   ...> users.first_name, users.last_name,
+   ...> businesses.name
+   ...> FROM ((reviews
+   ...> INNER JOIN users ON reviews.user_id = users.id)
+   ...> INNER JOIN businesses ON reviews.business_id = businesses.id);
+stars       comment               first_name  last_name   name
+
+----------  --------------------  ----------  ----------  ----------------------
+------
+5           Deathly Hospitality!  Denzel      George      Grundy Hollow Wedding
+Chapel
+5           Awesome Towing        Bradford    Pitt        Amir's Towing
+
+// In order to view information for one specific business, just use 
+// WHERE at the end and specify the name of the busines shown below
+
+sqlite> SELECT reviews.stars, reviews.comment,
+   ...> users.first_name, users.last_name,
+   ...> businesses.name
+   ...> FROM ((reviews
+   ...> INNER JOIN users ON reviews.user_id = users.id)
+   ...> INNER JOIN businesses ON reviews.business_id = businesses.id)
+   ...> WHERE
+   ...> businesses.name = "Amir's Towing";
+stars       comment         first_name  last_name   name
+----------  --------------  ----------  ----------  -------------
+5           Awesome Towing  Bradford    Pitt        Amir's Towing
+sqlite>
