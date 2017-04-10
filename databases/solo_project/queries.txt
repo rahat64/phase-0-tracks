@@ -1,0 +1,50 @@
+sqlite> SELECT * FROM Arcanas;
+id          name
+----------  ----------
+1           Fool
+2           Magician
+3           Lovers
+4           Chariot
+sqlite> UPDATE Personas SET name="Carmen" WHERE name="Carment";
+sqlite> SELECT * FROM Personas;
+id          name        damage_type     evolution   arcana_type
+----------  ----------  --------------  ----------  -----------
+1           Arsene      Curse/Physical  false       1
+2           Zorro       Wind/Healer     true        2
+3           Carmen      Fire/Healer     true        3
+4           Cpt. Kidd   Lightning/Phys  true        4
+sqlite> SELECT * FROM Personas WHERE Personas.arcana_type = Arcanas.id;
+Error: no such column: Arcanas.id
+sqlite> SELECT * FROM Personas, Arcanas WHERE Personas.arcana_type = Arcanas.id;
+
+id          name        damage_type     evolution   arcana_type  id          nam
+e
+----------  ----------  --------------  ----------  -----------  ----------  ---
+-------
+1           Arsene      Curse/Physical  false       1            1           Foo
+l
+2           Zorro       Wind/Healer     true        2            2           Mag
+ician
+3           Carmen      Fire/Healer     true        3            3           Lov
+ers
+4           Cpt. Kidd   Lightning/Phys  true        4            4           Cha
+riot
+sqlite> SELECT Personas.name, Personas.damage_type, Personas.evolution,
+   ...> Arcanas.name
+   ...> FROM Personas JOIN Arcanas ON Personas.arcana_type = Arcanas.id;
+name        damage_type     evolution   name
+----------  --------------  ----------  ----------
+Arsene      Curse/Physical  false       Fool
+Zorro       Wind/Healer     true        Magician
+Carmen      Fire/Healer     true        Lovers
+Cpt. Kidd   Lightning/Phys  true        Chariot
+sqlite> DELETE FROM Personas WHERE name="Arsene";
+sqlite> SELECT Personas.name, Personas.damage_type, Personas.evolution,
+   ...> Arcanas.name
+   ...> FROM Personas JOIN Arcanas ON Personas.arcana_type = Arcanas.id;
+name        damage_type  evolution   name
+----------  -----------  ----------  ----------
+Zorro       Wind/Healer  true        Magician
+Carmen      Fire/Healer  true        Lovers
+Cpt. Kidd   Lightning/P  true        Chariot
+sqlite>
